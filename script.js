@@ -7,16 +7,24 @@ container.style.margin = "0 auto";
 
 for (let i = 1; i <= 256; i++) {
     const div = document.createElement("div");
-        div.style.backgroundColor = "#f0f0f0";
-        div.style.margin = "1px"; 
-        div.style.padding = "0"; 
-        div.style.border = "1px solid #ccc"; 
-        div.style.width = "14px"; 
-        div.style.height = "14px"; 
-        div.style.display = "flex";
-        div.style.alignItems = "center";
-        div.style.justifyContent = "center";
-        div.style.boxSizing = "border-box";
+    div.style.backgroundColor = "#f0f0f0";
+    div.style.margin = "1px"; 
+    div.style.padding = "0"; 
+    div.style.border = "1px solid #ccc"; 
+    div.style.width = "14px"; 
+    div.style.height = "14px"; 
+    div.style.display = "flex";
+    div.style.alignItems = "center";
+    div.style.justifyContent = "center";
+    div.style.boxSizing = "border-box";
+    
+    div.addEventListener("mouseover", function() {
+        div.style.backgroundColor = "black";
+    });
 
-        container.appendChild(div);
+    div.addEventListener("mouseout", function() {
+        div.style.backgroundColor = "#f0f0f0";
+    });
+
+    container.appendChild(div);
 }
